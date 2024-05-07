@@ -374,18 +374,15 @@ benefit our cost-effective coaching services and be a part of Paul’s Academy.
               <h1 class="text-white m-0">Fill up your details here</h1>
             </div>
             <div class="card-body rounded-bottom bg-primary p-5">
-              <form>
+              
                 <div class="form-group">
-                  <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                  <input id="name" type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
                 </div>
                 <div class="form-group">
                   <input type="text" class="form-control border-0 p-4" placeholder="Phone Number" required="required" />
                 </div>
                 <div class="form-group">
-                  <select class="custom-select border-0 px-4" style="height: 47px">
+                  <select id="enquiry" class="custom-select border-0 px-4" style="height: 47px">
                     <option selected>Enquiry for</option>
                     <option value="1">Degree</option>
                     <option value="2">School / PUC</option>
@@ -393,11 +390,11 @@ benefit our cost-effective coaching services and be a part of Paul’s Academy.
                   </select>
                 </div>
                 <div>
-                  <button class="btn btn-secondary btn-block border-0 py-3" type="submit">
+                  <button class="btn btn-secondary btn-block border-0 py-3" onclick="contactWhatsapp()">
                     Enquire Now
                   </button>
                 </div>
-              </form>
+             
             </div>
           </div>
         </div>
@@ -638,13 +635,11 @@ benefit our cost-effective coaching services and be a part of Paul’s Academy.
         </p>
         <div class="d-flex justify-content-start mt-4">
           <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px"
-            href="#"><i class="fab fa-twitter"></i></a>
+            href="https://www.facebook.com/paulsacademy?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px"
+            href="https://www.facebook.com/paulsacademy?mibextid=ZbWKwL"><i class="fi fi-brands-whatsapp"></i></a>
           <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px"
-            href="#"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px"
-            href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px"
-            href="#"><i class="fab fa-instagram"></i></a>
+            href="https://www.instagram.com/artharjamespaul?igsh=dW94aTFsMGNhMmtn"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
       <div class="col-lg-6 col-md-6 mb-5">
@@ -667,7 +662,7 @@ benefit our cost-effective coaching services and be a part of Paul’s Academy.
           <h4 class="fa fa-phone-alt text-primary"></h4>
           <div class="pl-3">
             <h5 class="text-white">Phone</h5>
-            <p>+91 98864 91857</p>
+            <p>+91 9739506734</p>
           </div>
         </div>
       </div>
@@ -732,6 +727,16 @@ benefit our cost-effective coaching services and be a part of Paul’s Academy.
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
+  <script>
+    function contactWhatsapp(){
+      let pName = document.getElementById('name');
+      let pEnquiry= document.getElementById('enquiry');
+      let pMsg = 'Hi Pauls Academy my Name is --'+ pName.value + " I am enquirying for "+pEnquiry.options[pEnquiry.value].innerHTML;
+      var whatsappLink = "https://wa.me/+919739506734"+ "?text=" + encodeURIComponent(pMsg);
+        // Open the link in a new tab
+      window.open(whatsappLink);
+    }
+  </script>
 </body>
 
 </html>
